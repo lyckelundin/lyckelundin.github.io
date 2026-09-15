@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<title>Museisektion – förhandsgranskning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #10231F;
+    --surface: #16302A;
+    --ink: #EFEAE0;
+    --muted: #9CB3AA;
+    --brass: #C6A15B;
+    --rust: #C1613F;
+    --hairline: rgba(239,234,224,0.16);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.55;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin: 0 0 20px;
+  }
+
+  .lede {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 58ch;
+    margin: 0 0 48px;
+  }
+
+  .stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--hairline);
+    margin-bottom: 56px;
+  }
+
+  .stat {
+    flex: 1 1 200px;
+    padding: 24px 20px 24px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .stat + .stat {
+    border-left: 1px solid var(--hairline);
+    padding-left: 20px;
+  }
+
+  .stat .num {
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    font-weight: 500;
+    display: block;
+  }
+
+  .stat .num.down { color: var(--rust); }
+  .stat .num.up { color: var(--brass); }
+
+  .stat .label {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .chart-block {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    padding: 32px 28px 20px;
+    margin-bottom: 40px;
+  }
+
+  .chart-block h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0 0 24px;
+  }
+
+  .quote {
+    border-left: 2px solid var(--brass);
+    padding: 4px 0 4px 24px;
+    margin: 0 0 40px;
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.45;
+  }
+
+  .quote cite {
+    display: block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+
+  .counterpoint {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 58ch;
+    margin: 0 0 40px;
+  }
+
+  .source {
+    font-size: 12.5px;
+    color: var(--muted);
+    border-top: 1px solid var(--hairline);
+    padding-top: 16px;
+  }
+
+  @media (max-width: 480px) {
+    .stat { flex: 1 1 100%; border-left: none !important; padding-left: 0 !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h2>Vad hände med museibesöken när entrén blev gratis 2016 — och när den nya regeringen tog bort den igen 2023?</h2>
+  <p class="lede">2016 slopade regeringen entréavgiften på 18 statliga museer. Vid årsskiftet 2022–2023 återinförde en ny regering avgiften. Museibesöken följde med i båda riktningarna.</p>
+
+  <div class="stat-row">
+    <div class="stat">
+      <span class="num up">+50%</span>
+      <span class="label">Reformmuseer, 2016 – när entrén blev gratis</span>
+    </div>
+    <div class="stat">
+      <span class="num down">−21%</span>
+      <span class="label">Samma museer, 2023 – när avgiften kom tillbaka</span>
+    </div>
+    <div class="stat">
+      <span class="num up">+14%</span>
+      <span class="label">Jämförbara museer utan förändrad avgift, 2023</span>
+    </div>
+  </div>
+
+  <div class="chart-block">
+    <h3>Fri entré infördes 2016 och avskaffades 2023</h3>
+    <canvas id="reformChart" height="220"></canvas>
+  </div>
+
+  <div class="chart-block">
+    <h3>Förändring i besök per museum, 2023</h3>
+    <canvas id="museumChart" height="200"></canvas>
+  </div>
+
+  <blockquote class="quote">
+    lägg till text
+    <cite>— </cite>
+  </blockquote>
+
+  <p class="counterpoint"></p>
+
+  <p class="source">Källor: Myndigheten för kulturanalys, "Fri entré till museer" (Rapport 2023:1) och "Ett år utan fri entré" (Faktablad 2024:1); Sveriges Museer, besöksstatistik 2023. Reformmuseer = statliga museer som ingick i 2016 års fri entré-reform. Jämförelsegruppen för 2016 är ett genomsnitt 2013–2019 (exakt siffra för enbart 2016 finns ej); jämförelsegruppen för 2023 avser samma år.</p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+new Chart(document.getElementById('reformChart'), {
+  type: 'bar',
+  data: {
+    labels: ['2016: Fri entré införs', '2023: Fri entré avskaffas'],
+    datasets: [
+      {
+        label: 'Reformmuseer (fick/förlorade fri entré)',
+        data: [50, -21],
+        backgroundColor: '#C6A15B',
+        borderRadius: 2,
+        barThickness: 48
+      },
+      {
+        label: 'Jämförbara museer (oförändrad avgift)',
+        data: [6, 14],
+        backgroundColor: '#5F7A70',
+        borderRadius: 2,
+        barThickness: 48
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: { color: '#EFEAE0', font: { family: 'IBM Plex Sans' }, boxWidth: 14 }
+      }
+    },
+    scales: {
+      y: {
+        title: { display: true, text: '% förändring i besök', color: '#9CB3AA', font: { family: 'IBM Plex Sans' } },
+        ticks: { color: '#9CB3AA', font: { family: 'IBM Plex Sans' } },
+        grid: { color: 'rgba(239,234,224,0.08)' }
+      },
+      x: {
+        ticks: { color: '#EFEAE0', font: { family: 'IBM Plex Sans' } },
+        grid: { display: false }
+      }
+    }
+  }
+});
+
+new Chart(document.getElementById('museumChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Nationalmuseum', 'Livrustkammaren', 'Världskulturmuseet', 'Vasamuseet'],
+    datasets: [{
+      label: '% förändring i besök 2023 vs 2022',
+      data: [-23, -28, 3, 32],
+      backgroundColor: function(ctx) {
+        const v = ctx.raw ?? ctx.dataset.data[ctx.dataIndex];
+        return v < 0 ? '#C1613F' : '#C6A15B';
+      },
+      borderRadius: 2,
+      barThickness: 40
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: {
+        ticks: { color: '#9CB3AA', font: { family: 'IBM Plex Sans' } },
+        grid: { color: 'rgba(239,234,224,0.08)' }
+      },
+      x: {
+        ticks: { color: '#EFEAE0', font: { family: 'IBM Plex Sans' } },
+        grid: { display: false }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>
