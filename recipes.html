@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P5H66VJ9');</script>
+        <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder — Lycke Lundin</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#f5f5f3] text-[#121212] font-sans antialiased selection:bg-[#d62828] selection:text-white">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5H66VJ9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Sticky Top Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#f5f5f3]/90 backdrop-blur-md border-b border-gray-300/60 px-4 md:px-12 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between text-xs md:text-sm font-semibold tracking-widest uppercase">
+            <div class="flex items-center space-x-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#0a0a0a] inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#0a0a0a]/50 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-[#0a0a0a]/25 inline-block"></span>
+            </div>
+            <div class="tracking-widest font-bold text-gray-800">
+                RECIPE FINDER
+            </div>
+            <a href="index.html" data-link-name="recept-tillbaka-header" class="hover:text-[#d62828] transition-colors">← PORTFOLIO</a>
+        </div>
+    </header>
+
+    <!-- Decorative vine, in the site's own palette -->
+    <svg class="w-full block" style="height:34px;" viewBox="0 0 640 34" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="640" height="34" fill="#f5f5f3"/>
+        <path d="M-10 8 C 60 26, 110 -4, 170 12 S 280 28, 340 10 S 450 -4, 510 14 S 610 24, 650 8"
+              fill="none" stroke="#0a0a0a" stroke-width="1.75" stroke-linecap="round" opacity="0.55"/>
+        <g fill="#0a0a0a" opacity="0.45">
+            <ellipse cx="55" cy="18" rx="7" ry="3.5" transform="rotate(-25 55 18)"/>
+            <ellipse cx="130" cy="4" rx="7" ry="3.5" transform="rotate(35 130 4)"/>
+            <ellipse cx="205" cy="18" rx="7" ry="3.5" transform="rotate(-20 205 18)"/>
+            <ellipse cx="280" cy="6" rx="7" ry="3.5" transform="rotate(30 280 6)"/>
+            <ellipse cx="360" cy="20" rx="7" ry="3.5" transform="rotate(-25 360 20)"/>
+            <ellipse cx="440" cy="4" rx="7" ry="3.5" transform="rotate(35 440 4)"/>
+            <ellipse cx="520" cy="18" rx="7" ry="3.5" transform="rotate(-20 520 18)"/>
+            <ellipse cx="590" cy="6" rx="7" ry="3.5" transform="rotate(30 590 6)"/>
+        </g>
+        <g fill="#d62828">
+            <circle cx="310" cy="22" r="3"/>
+            <circle cx="317" cy="26" r="3"/>
+            <circle cx="324" cy="22" r="3"/>
+        </g>
+    </svg>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="relative py-16 md:py-24 px-4 md:px-12 flex flex-col items-center text-center overflow-hidden bg-grid-pattern border-b border-gray-300">
+            <span class="absolute top-10 right-10 md:right-24 text-3xl md:text-5xl text-[#d62828] select-none">✦</span>
+
+            <svg width="92" height="46" viewBox="0 0 140 70" class="mb-2 select-none" xmlns="http://www.w3.org/2000/svg"
+                 fill="none" stroke="#0a0a0a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="8" x2="18" y2="26"/>
+                <line x1="24" y1="8" x2="24" y2="26"/>
+                <line x1="30" y1="8" x2="30" y2="26"/>
+                <path d="M14 26 Q14 34 22 34 Q30 34 30 26"/>
+                <line x1="22" y1="34" x2="22" y2="64"/>
+                <circle cx="70" cy="38" r="25" stroke="#d62828"/>
+                <circle cx="70" cy="38" r="16" stroke="#0a0a0a"/>
+                <path d="M118 8 C 128 8 128 24 121 30 L 121 64"/>
+            </svg>
+
+            <span class="font-script text-4xl sm:text-6xl md:text-7xl text-[#0a0a0a] -mb-4 md:-mb-8 select-none transform -rotate-2">
+                What's cooking?
+            </span>
+            <h1 class="font-display text-6xl sm:text-8xl md:text-9xl leading-none text-[#d62828] tracking-tight select-none">
+                RECIPE FINDER
+            </h1>
+            <p class="mt-6 text-sm md:text-base tracking-widest uppercase text-gray-600 max-w-md mx-auto font-medium">
+                Pantry • Weather • Nearest Store
+            </p>
+        </section>
+
+        <!-- PANTRY -->
+        <section class="py-20 px-6 md:px-16 bg-[#f5f5f3] border-b border-gray-300">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-3 mb-8">
+                    <h2 class="font-display text-5xl md:text-6xl text-[#d62828] leading-none">THE PANTRY</h2>
+                    <span class="text-3xl text-[#0a0a0a]">✶</span>
+                </div>
+                <p class="text-gray-600 mb-6 max-w-xl">Add what you already have at home, then find something to cook.</p>
+
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <input type="text" id="ingredientInput" placeholder="e.g. onion"
+                           onkeypress="if(event.key==='Enter') addIngredient()"
+                           class="flex-1 min-w-[220px] px-5 py-3 rounded-full border border-gray-300 bg-white text-sm focus:outline-none focus:border-[#d62828]">
+                    <button onclick="addIngredient()"
+                            class="px-6 py-3 rounded-full border border-[#d62828] text-[#d62828] font-semibold uppercase text-xs tracking-widest hover:bg-[#d62828] hover:text-white transition-all duration-300">
+                        Add
+                    </button>
+                </div>
+
+                <div id="ingredientList" class="flex flex-wrap gap-2 mb-10">
+                    <span class="text-gray-400 text-sm italic">No ingredients added yet.</span>
+                </div>
+
+                <button onclick="startSearch()"
+                        class="w-full md:w-auto px-10 py-4 rounded-full bg-[#d62828] text-white font-semibold uppercase text-sm tracking-widest hover:bg-[#9e1c1c] transition-all duration-300">
+                    Find something to cook →
+                </button>
+            </div>
+        </section>
+
+        <!-- WEATHER & STORE -->
+        <section class="py-20 px-6 md:px-16 bg-[#f5f5f3] border-b border-gray-300">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-3 mb-8">
+                    <h2 class="font-display text-5xl md:text-6xl text-[#d62828] leading-none">CONDITIONS</h2>
+                    <span class="text-3xl text-[#0a0a0a]">✶</span>
+                </div>
+
+                <p id="recommendationText" class="font-script text-2xl md:text-4xl text-[#0a0a0a] mb-10 max-w-2xl"></p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-8 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-[#d62828] text-2xl mb-4">☀</div>
+                        <p class="text-xs uppercase tracking-widest text-gray-500 mb-1">Weather</p>
+                        <p id="weatherResult" class="text-gray-700">Waiting for search.</p>
+                    </div>
+                    <div class="p-8 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-[#d62828] text-2xl mb-4">⚑</div>
+                        <p class="text-xs uppercase tracking-widest text-gray-500 mb-1">Nearest store</p>
+                        <p id="storeResult" class="text-gray-700">Waiting for search.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUGGESTIONS -->
+        <section class="py-20 px-6 md:px-16 bg-[#f5f5f3] border-b border-gray-300">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-baseline space-x-4 mb-12">
+                    <h2 class="font-display text-6xl md:text-8xl text-[#d62828]">SUGGESTIONS</h2>
+                    <span class="font-script text-3xl md:text-5xl text-[#0a0a0a]">for tonight</span>
+                </div>
+                <div id="recipeResult" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <p class="text-gray-400 italic col-span-full">Waiting for search.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.querySelectorAll('a[data-link-name]').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.dataLayer.push({
+                    event: 'link_click',
+                    link: {
+                        name: link.getAttribute('data-link-name'),
+                        text: link.textContent.trim(),
+                        url: link.getAttribute('href')
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+
+        const RECIPE_PROXY_URL = "https://recipe-proxy.lycke-lundin.workers.dev";
+
+        let ingredients = [];
+        let lastTemp = null;
+
+        function addIngredient() {
+            const input = document.getElementById('ingredientInput');
+            const value = input.value.trim();
+            if (!value) return;
+            ingredients.push(value);
+            input.value = '';
+            renderIngredients();
+        }
+
+        function removeIngredient(index) {
+            ingredients.splice(index, 1);
+            renderIngredients();
+        }
+
+        function renderIngredients() {
+            const div = document.getElementById('ingredientList');
+            if (ingredients.length === 0) {
+                div.innerHTML = '<span class="text-gray-400 text-sm italic">No ingredients added yet.</span>';
+                return;
+            }
+            div.innerHTML = ingredients.map((ing, i) => `
+                <span class="inline-flex items-center gap-2 bg-white border border-gray-300 rounded-full pl-4 pr-2 py-1.5 text-sm">
+                    ${ing}
+                    <button onclick="removeIngredient(${i})" class="text-gray-400 hover:text-[#d62828] px-1">✕</button>
+                </span>
+            `).join('');
+        }
+
+        async function startSearch() {
+            if (ingredients.length === 0) {
+                alert('Add at least one ingredient to the pantry first.');
+                return;
+            }
+
+            document.getElementById('weatherResult').textContent = 'Getting your location...';
+            document.getElementById('storeResult').textContent = 'Getting your location...';
+            document.getElementById('recipeResult').innerHTML = '<p class="text-gray-400 italic col-span-full">Searching for recipes...</p>';
+            document.getElementById('recommendationText').textContent = '';
+
+            navigator.geolocation.getCurrentPosition(async (position) => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                fetchWeather(lat, lon);
+                fetchNearestStore(lat, lon);
+                fetchRecipes(ingredients);
+            }, () => {
+                document.getElementById('weatherResult').innerHTML = '<span class="text-[#d62828]">Allow location sharing for weather info.</span>';
+                document.getElementById('storeResult').innerHTML = '<span class="text-[#d62828]">Allow location sharing for store info.</span>';
+                fetchRecipes(ingredients);
+            });
+        }
+
+        async function fetchWeather(lat, lon) {
+            const div = document.getElementById('weatherResult');
+            try {
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m`;
+                const res = await fetch(url);
+                const data = await res.json();
+                lastTemp = data.current.temperature_2m;
+                div.innerHTML = `<span class="text-[#0a0a0a] font-semibold">${lastTemp}°C</span> right now`;
+                updateRecommendation();
+            } catch (e) {
+                div.innerHTML = `<span class="text-[#d62828]">Could not fetch weather.</span>`;
+            }
+        }
+
+        async function fetchNearestStore(lat, lon) {
+            const div = document.getElementById('storeResult');
+            try {
+                const query = `[out:json];node["shop"="supermarket"](around:1500,${lat},${lon});out center 3;`;
+                const url = 'https://overpass-api.de/api/interpreter?data=' + encodeURIComponent(query);
+                const res = await fetch(url);
+                const data = await res.json();
+                if (!data.elements.length) { div.textContent = 'No store found within 1.5 km.'; return; }
+                const name = data.elements[0].tags.name || 'a nearby store';
+                div.innerHTML = `<span class="text-[#0a0a0a] font-semibold">${name}</span>`;
+            } catch (e) {
+                div.innerHTML = `<span class="text-[#d62828]">Could not fetch store data.</span>`;
+            }
+        }
+
+        async function fetchRecipes(ingredientList) {
+            const div = document.getElementById('recipeResult');
+            try {
+                const ingStr = ingredientList.join(',');
+
+                // Anropar din egen Worker istället för Spoonacular direkt — ingen nyckel i den här filen
+                const url = `${RECIPE_PROXY_URL}?ingredients=${encodeURIComponent(ingStr)}`;
+                const res = await fetch(url);
+                if (!res.ok) throw new Error('Could not reach the recipe service (status ' + res.status + ')');
+                const data = await res.json();
+
+                if (!data.length) {
+                    div.innerHTML = '<p class="text-gray-400 italic col-span-full">No recipes found for these ingredients.</p>';
+                    return;
+                }
+
+                const ids = data.map(r => r.id).join(',');
+                let sourceLinks = {};
+                try {
+                    const bulkUrl = `${RECIPE_PROXY_URL}?action=bulk&ids=${ids}`;
+                    const bulkRes = await fetch(bulkUrl);
+                    const bulkData = await bulkRes.json();
+                    bulkData.forEach(r => { sourceLinks[r.id] = r.sourceUrl; });
+                } catch (e) { /* falls back to Spoonacular's own page below */ }
+
+                div.innerHTML = data.map(r => {
+                    const link = sourceLinks[r.id] || `https://spoonacular.com/recipes/${slugify(r.title)}-${r.id}`;
+                    return `
+                        <a href="${link}" target="_blank" rel="noopener" data-link-name="recept-forslag"
+                           class="block p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:border-[#d62828] transition-all">
+                            <img src="${r.image}" alt="${r.title}" class="w-full h-36 object-cover rounded-xl mb-4">
+                            <h3 class="font-bold text-lg text-[#0a0a0a] mb-1">${r.title}</h3>
+                            <p class="text-sm text-gray-500">${r.usedIngredientCount} you have · ${r.missedIngredientCount} missing</p>
+                        </a>
+                    `;
+                }).join('');
+
+                updateRecommendation(data[0].missedIngredientCount);
+            } catch (e) {
+                div.innerHTML = `<p class="text-[#e63946] col-span-full">${e.message}</p>`;
+            }
+        }
+
+        function slugify(text) {
+            return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        }
+
+        function updateRecommendation(missingCount) {
+            const el = document.getElementById('recommendationText');
+            if (lastTemp === null) return;
+            let text = '';
+            if (lastTemp < 8) {
+                text = "It's cold out — something warm and hearty fits well.";
+            } else if (lastTemp > 20) {
+                text = "It's warm out — maybe something light and fresh instead.";
+            } else {
+                text = "Pleasant weather — most recipes will suit today.";
+            }
+            if (missingCount !== undefined) {
+                text += missingCount === 0
+                    ? ' You already have everything you need.'
+                    : ` You're missing ${missingCount} ingredient${missingCount === 1 ? '' : 's'} for the top pick.`;
+            }
+            el.textContent = text;
+        }
+    </script>
+</body>
+</html>

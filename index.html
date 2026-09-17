@@ -60,7 +60,8 @@
                 </h1>
 
                 <div class="relative z-10 -mt-16 sm:-mt-24 md:-mt-44 w-64 sm:w-80 md:w-96 h-80 sm:h-96 md:h-[28rem] rounded-3xl overflow-hidden shadow-2xl border-4 border-white image-frame">
-                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQEWP3G6IlWW_g/profile-displayphoto-crop_800_800/B4EZ_iHX1rHwAI-/0/1786205012795?e=1789603200&v=beta&t=Khf8l4yhPXOskvlamLdgo7pqokI2IIpTQodJhIOi_I8"
+                    <img id="hero-photo" src="Linkedin.jpg"
+                         data-rain-src="regnhatt.png"
                          alt="Lycke Lundin"
                          class="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition-all duration-700">
                     <div class="absolute inset-0 halftone-overlay pointer-events-none"></div>
@@ -85,14 +86,15 @@
                     </div>
 
                     <p class="text-gray-700 text-base md:text-lg leading-relaxed max-w-2xl font-normal">
-                       Hi! I'm Lycke, a Growth Marketing student at Berghs School of Communication with a background in Media & Communication Studies.
+                        Hi! I'm Lycke, a Growth Marketing student at Berghs School of Communication with a background in media and communication studies at Lund University.
 
-I'm interested in the intersection between creativity, data, human behaviour and how insights can become ideas that drive growth.
+                        Through some hands-on experience with social media marketing I started to become curious about what happens beyond the content itself. What makes people engage, what drives results, and why some ideas work better than others. That curiosity opened my eyes to Growth Marketing and the possibilities of combining creativity with data and strategy. Now, I'm building on that curiosity at Berghs, learning how to turn insights into smarter marketing decisions.
+
                     </p>
 
                     <div class="pt-6 flex items-center space-x-4 group cursor-pointer">
                         <span class="font-script text-4xl md:text-6xl text-[#0a0a0a] group-hover:text-[#d62828] transition-colors">
-                            Introduci
+                            Introduction
                         </span>
                         <div class="w-12 h-12 rounded-full border border-[#0a0a0a] flex items-center justify-center group-hover:bg-[#d62828] group-hover:border-[#d62828] group-hover:text-white transition-all duration-300">
                             ➔
@@ -101,11 +103,10 @@ I'm interested in the intersection between creativity, data, human behaviour and
                 </div>
 
                 <div class="lg:col-span-5 relative">
-                    <div class="relative w-full h-[380px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl border-2 border-gray-300 image-frame bg-gray-200">
-                        <img src="https://i.pinimg.com/1200x/98/e6/f6/98e6f60bfe43487c1edbf3296f2d50d7.jpg"
-                             alt="About Lycke Lundin"
-                             class="w-full h-full object-cover filter grayscale contrast-110">
-                        <div class="absolute inset-0 bg-[#d62828]/10"></div>
+                    <div class="relative w-full rounded-2xl overflow-hidden shadow-xl border-2 border-gray-300 image-frame bg-gray-200">
+                        <img src="portfoliopic.png"
+                             alt="Lycke Lundin"
+                             class="w-full h-auto object-contain">
                     </div>
                 </div>
 
@@ -113,204 +114,356 @@ I'm interested in the intersection between creativity, data, human behaviour and
         </section>
 
     </main>
-    <!-- 4. PROJEKT 01 (DARK BRAND CASE STUDY) -->
-<section class="py-24 px-6 md:px-16 bg-[#0a0a0a] text-white border-t border-zinc-800">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-        <!-- Left Details Column -->
-        <div class="lg:col-span-6 space-y-6">
-            <div class="relative">
-                <h2 class="font-display text-7xl md:text-9xl text-white leading-none">
-                    PROJEKT 1
+    <!-- 4. PROJECTS -->
+    <section class="py-24 px-6 md:px-16 bg-[#0a0a0a] text-white border-t border-zinc-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-display text-6xl md:text-8xl leading-none mt-3 mb-12">PROJECTS</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- PROJECT 1 -->
+                <div class="bg-zinc-900 border border-zinc-700 rounded-2xl p-8 hover:border-[#d62828] transition-colors">
+
+                    <span class="text-xs uppercase tracking-widest text-gray-500">
+                        Data Dashboard
+                    </span>
+
+                    <h3 class="font-display text-3xl text-white mt-2 mb-6">
+                        Museer & Entrépris
+                    </h3>
+
+                    <div class="space-y-5">
+
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#d62828] font-semibold">
+                                What I explored
+                            </span>
+                            <p class="text-sm text-gray-400 leading-relaxed mt-2">
+                                How did visitor numbers change when Swedish state museums introduced free admission in 2016 — and what happened when admission fees returned in 2023?
+                            </p>
+                        </div>
+
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#d62828] font-semibold">
+                                New skill
+                            </span>
+                            <p class="text-sm text-gray-400 leading-relaxed mt-2">
+                                Turning raw data into interactive visualizations, identifying patterns and communicating insights through data.
+                            </p>
+                        </div>
+
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#d62828] font-semibold">
+                                Tools
+                            </span>
+                            <p class="text-sm text-gray-400 leading-relaxed mt-2">
+                                Chart.js · JavaScript · Data visualization
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <a href="datavisual.html" data-link-name="projekt-dashboard"
+                       class="inline-flex items-center px-5 py-2.5 mt-8 rounded-full border border-[#d62828] text-[#d62828] text-xs font-semibold uppercase tracking-widest hover:bg-[#d62828] hover:text-white transition-all duration-300">
+                        View Dashboard →
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+                <div class="bg-zinc-900 border border-zinc-700 rounded-2xl p-8 hover:border-[#d62828] transition-colors">
+
+                    <span class="text-xs uppercase tracking-widest text-gray-500">
+                        Web App
+                    </span>
+
+                    <h3 class="font-display text-3xl text-white mt-2 mb-6">
+                        Recipe Finder
+                    </h3>
+
+                    <div class="space-y-5">
+
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#d62828] font-semibold">
+                                What I explored
+                            </span>
+                            <p class="text-sm text-gray-400 leading-relaxed mt-2">
+                                How can live data from different sources be combined to create a more personalized experience for users looking for something to cook?
+                            </p>
+                        </div>
+
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#d62828] font-semibold">
+                                New skill
+                            </span>
+                            <p class="text-sm text-gray-400 leading-relaxed mt-2">
+                                Combining and processing data from multiple APIs and turning it into one cohesive and useful user experience.
+                            </p>
+                        </div>
+
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-[#d62828] font-semibold">
+                                Tools
+                            </span>
+                            <p class="text-sm text-gray-400 leading-relaxed mt-2">
+                                JavaScript · APIs · Data processing · UX
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <a href="recipe-finder.html" data-link-name="projekt-recipe-finder"
+                       class="inline-flex items-center px-5 py-2.5 mt-8 rounded-full border border-[#d62828] text-[#d62828] text-xs font-semibold uppercase tracking-widest hover:bg-[#d62828] hover:text-white transition-all duration-300">
+                        Try It →
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 5. MY JOURNEY -->
+    <section class="py-24 px-6 md:px-16 bg-[#f5f5f3] border-t border-b border-gray-300">
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Section Title -->
+            <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-16">
+                <h2 class="font-display text-7xl md:text-9xl text-[#d62828] leading-none">
+                    MY JOURNEY
                 </h2>
-                <span class="font-script text-5xl md:text-7xl text-[#d62828] block -mt-4 md:-mt-8 ml-2">
-                    Exempel
+                <span class="font-script text-5xl md:text-7xl text-[#0a0a0a]">
+                    where it started
                 </span>
             </div>
 
-            <p class="text-gray-400 text-base md:text-lg leading-relaxed max-w-lg">
-                BESKRIVNING AV PROJEKT.
-            </p>
+            <!-- Journey Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <div class="pt-4">
-             <a href="https://example.com" target="_blank" rel="noopener noreferrer"
-             data-link-name="projekt-1"
-             class="inline-flex items-center px-6 py-3 rounded-full border border-[#d62828] ...">
-                     BESÖK HEMSIDAN
-            </a>
-            </div>
-        </div> 
-        <!-- Right Product Feature Frame -->
-        <div class="lg:col-span-6 flex justify-center">
-            <div class="relative w-full max-w-md h-[450px] rounded-3xl p-4 border border-zinc-700 bg-zinc-900 shadow-2xl image-frame flex items-center justify-center">
-                <div class="w-full h-full rounded-2xl overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1608248597260-84384a60185e?auto=format&fit=crop&w=800&q=80"
-                         alt="NAMN PÅ PROJEKT"
-                         class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-                        <span class="text-xs uppercase tracking-widest text-zinc-300">NAMN PÅ KAMPANJ</span>
-                        <span class="text-xl text-[#d62828]">✦</span>
+                <!-- 01 -->
+                <div class="p-8 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-xs uppercase tracking-widest text-gray-400">
+                            01 / Foundation
+                        </span>
+                        <span class="text-[#d62828] text-2xl">+</span>
                     </div>
+
+                    <h3 class="font-bold text-xl text-[#0a0a0a] mb-4">
+                        Media & Communication
+                    </h3>
+
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        My background in Media and Communication at Lund University gave me a foundation in understanding audiences, media, communication and how people interact with messages and digital platforms.
+                    </p>
+                </div>
+
+
+                <!-- 02 -->
+                <div class="p-8 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-xs uppercase tracking-widest text-gray-400">
+                            02 / Experience
+                        </span>
+                        <span class="text-[#d62828] text-2xl">+</span>
+                    </div>
+
+                    <h3 class="font-bold text-xl text-[#0a0a0a] mb-4">
+                        Creative & Customer Experience
+                    </h3>
+
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Working with customers, retail and social media marketing has given me a practical understanding of people, communication and what catches attention. My creative background has also shaped how I approach ideas, visuals and content.
+                    </p>
+                </div>
+
+
+                <!-- 03 -->
+                <div class="p-8 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="text-xs uppercase tracking-widest text-gray-400">
+                            03 / Growth
+                        </span>
+                        <span class="text-[#d62828] text-2xl">+</span>
+                    </div>
+
+                    <h3 class="font-bold text-xl text-[#0a0a0a] mb-4">
+                        Growth Marketing
+                    </h3>
+
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        At Berghs, I'm building on that foundation with data, analytics and digital strategy — learning how to track behaviour, turn data into insights and use experimentation to understand what actually drives results.
+                    </p>
+                </div>
+
+            </div>
+
+           
+    </section>
+
+
+    <!-- 6. NEXT UP -->
+    <section class="py-24 px-6 md:px-16 bg-[#0a0a0a] text-white">
+        <div class="max-w-7xl mx-auto space-y-12">
+
+            <!-- Title and Text Description -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+                <div class="lg:col-span-7">
+                    <h2 class="font-display text-7xl sm:text-8xl md:text-9xl text-[#d62828] leading-none">
+                        NEXT UP
+                    </h2>
+        
+                </div>
+               
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-8 bg-zinc-900 rounded-2xl border border-zinc-700 hover:border-[#d62828] transition-colors">
+                    <div class="text-[#d62828] text-2xl mb-4">+</div>
+                    <h3 class="font-bold text-xl text-white mb-2">Growth Toolbox</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        A foundation in data-driven Growth Marketing. Measurement, tracking and analysis to create insights, make decisions and optimize digital activities, including Google Tag Manager, Google Analytics and AI-supported tools for analysis and visualization.
+                    </p>
+                </div>
+                <div class="p-8 bg-zinc-900 rounded-2xl border border-zinc-700 hover:border-[#d62828] transition-colors">
+                    <div class="text-[#d62828] text-2xl mb-4">+</div>
+                    <h3 class="font-bold text-xl text-white mb-2">Performance Marketing</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Practical and strategic knowledge of paid digital advertising. Campaign planning, audience segmentation, search and social ads, and using data and AI-driven methods to measure and optimize results.
+                    </p>
+                </div>
+                <div class="p-8 bg-zinc-900 rounded-2xl border border-zinc-700 hover:border-[#d62828] transition-colors">
+                    <div class="text-[#d62828] text-2xl mb-4">+</div>
+                    <h3 class="font-bold text-xl text-white mb-2">SEO & Content Marketing</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        How content and organic strategies drive long-term growth. Content strategy, SEO and organic content work, production across digital channels, and how AI is reshaping content creation and search behaviour.
+                    </p>
                 </div>
             </div>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- 5. EXPERIENCE / WORK SECTION -->
-<section class="py-24 px-6 md:px-16 bg-[#f5f5f3] border-t border-b border-gray-300">
-    <div class="max-w-7xl mx-auto">
-
-        <!-- Section Title Header -->
-        <div class="flex items-baseline space-x-4 mb-16">
-            <h2 class="font-display text-7xl md:text-9xl text-[#d62828]">
-                MY JOURNEY
-            </h2>
-            <span class="font-script text-5xl md:text-7xl text-[#0a0a0a]">
-                & education
-            </span>
-        </div>
-
-        <!-- Work Experience Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            <!-- Role 1 -->
-            <div class="p-8 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-                <div class="text-[#d62828] text-2xl mb-4">+</div>
-                <h3 class="font-bold text-xl text-[#0a0a0a] mb-2">Berghs Growth Marketing</h3>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                    Beskrivning av lärande och kunskaper från Berghs.
-                </p>
-            </div>
-
-            <!-- Role 2 -->
-            <div class="p-8 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-                <div class="text-[#d62828] text-2xl mb-4">+</div>
-                <h3 class="font-bold text-xl text-[#0a0a0a] mb-2">Media & kommunikation</h3>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                    Beskrivninga av utbildning.
-                </p>
-            </div>
-
-            <!-- Role 3 / Image Visual Frame -->
-            <div class="relative rounded-2xl overflow-hidden h-64 md:h-auto border border-gray-300 image-frame">
-                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
-                     alt="Experience Visual"
-                     class="w-full h-full object-cover filter grayscale">
-                <div class="absolute inset-0 bg-[#d62828]/10"></div>
-            </div>
 
         </div>
-
-    </div>
-</section>
+    </section>
 
 
-<!-- 6. PROJEKT 02 (LIGHT BRAND GALLERY) -->
-<section class="py-24 px-6 md:px-16 bg-[#f5f5f3] bg-grid-pattern">
-    <div class="max-w-7xl mx-auto space-y-12">
+    <!-- 7. CONTACT / LET'S WORK TOGETHER FOOTER -->
+    <section id="contact" class="py-24 px-6 md:px-16 bg-white border-t border-gray-300 text-center relative overflow-hidden">
 
-        <!-- Gallery Images Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="h-80 rounded-2xl overflow-hidden border border-gray-300 shadow-md image-frame">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Gallery 1" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500">
-            </div>
-            <div class="h-80 rounded-2xl overflow-hidden border border-gray-300 shadow-md image-frame">
-                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" alt="Gallery 2" class="w-full h-full object-cover">
-            </div>
-            <div class="h-80 rounded-2xl overflow-hidden border border-gray-300 shadow-md image-frame">
-                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Gallery 3" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500">
-            </div>
-        </div>
+        <div class="max-w-5xl mx-auto space-y-8">
 
-        <!-- Title and Text Description -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-            <div class="lg:col-span-7">
-                <h2 class="font-display text-7xl sm:text-8xl md:text-9xl text-[#d62828] leading-none">
-                    PROJEKT 02
-                </h2>
-                <span class="font-script text-5xl md:text-7xl text-[#0a0a0a] block -mt-4 md:-mt-8">
-                    namn på projekt
+            <!-- Large Heading -->
+            <div class="relative inline-block">
+                <span class="font-script text-5xl sm:text-7xl md:text-8xl text-[#0a0a0a] block -mb-4 md:-mb-8">
+                    Let's Work
                 </span>
+                <h2 class="font-display text-7xl sm:text-9xl md:text-[11rem] text-[#0a0a0a] tracking-tight leading-none">
+                    TOGETHER
+                </h2>
+                <span class="absolute -top-4 -right-8 text-4xl md:text-6xl text-[#d62828]">✶</span>
             </div>
-            <div class="lg:col-span-5">
-                <p class="text-gray-600 text-sm md:text-base leading-relaxed">
-                   beskrivande text av projekt
-                </p>
+
+            <p class="text-gray-500 text-sm md:text-base uppercase tracking-widest max-w-md mx-auto">
+               CONTACT ME
+            </p>
+
+            <!-- Interactive Contact Pill Buttons -->
+            <div class="pt-8 flex flex-wrap justify-center gap-4">
+                <a href="CV-Lycke-Lundin.pdf" download data-link-name="kontakt-cv"
+                   class="px-6 py-3 rounded-full border border-gray-300 text-gray-800 text-xs md:text-sm font-medium hover:border-[#d62828] hover:text-[#d62828] transition-all duration-300">
+                    CV
+                </a>
+
+                <a href="mailto:lycke.lundin@gmail.com" data-link-name="kontakt-email"
+                   class="px-6 py-3 rounded-full border border-gray-300 text-gray-800 text-xs md:text-sm font-medium hover:border-[#d62828] hover:text-[#d62828] transition-all duration-300">
+                    lycke.lundin@gmail.com
+                </a>
+
+                <a href="https://www.linkedin.com/in/lycke-lundin-309007156/" target="_blank" rel="noopener noreferrer" data-link-name="kontakt-linkedin"
+                   class="px-6 py-3 rounded-full border border-gray-300 text-gray-800 text-xs md:text-sm font-medium hover:border-[#d62828] hover:text-[#d62828] transition-all duration-300">
+                    LinkedIn
+                </a>
             </div>
+
         </div>
 
-    </div>
-</section>
-
-
-<!-- 7. CONTACT / LET'S WORK TOGETHER FOOTER -->
-<section id="contact" class="py-24 px-6 md:px-16 bg-white border-t border-gray-300 text-center relative overflow-hidden">
-
-    <div class="max-w-5xl mx-auto space-y-8">
-
-        <!-- Large Heading -->
-        <div class="relative inline-block">
-            <span class="font-script text-5xl sm:text-7xl md:text-8xl text-[#0a0a0a] block -mb-4 md:-mb-8">
-                Let's Work
-            </span>
-            <h2 class="font-display text-7xl sm:text-9xl md:text-[11rem] text-[#0a0a0a] tracking-tight leading-none">
-                TOGETHER
-            </h2>
-            <span class="absolute -top-4 -right-8 text-4xl md:text-6xl text-[#d62828]">✶</span>
+        <!-- Bottom Sub-Footer -->
+        <div class="mt-20 pt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 max-w-7xl mx-auto">
+            <div>GROWTH MARKETER PORTFOLIO</div>
+            <div class="mt-2 sm:mt-0">&copy; <span id="year"></span> LYCKE LUNDIN. ALL RIGHTS RESERVED.</div>
         </div>
+    </section>
 
-        <p class="text-gray-500 text-sm md:text-base uppercase tracking-widest max-w-md mx-auto">
-           Kontakta mig för vidare information och bestämmelser.
-        </p>
-
-        <!-- Interactive Contact Pill Buttons -->
-        <div class="pt-8 flex flex-wrap justify-center gap-4">
-            <a href="Tel:+46704142666" data-link-name="kontakt-telefon"
-               class="px-6 py-3 rounded-full border border-gray-300 text-gray-800 text-xs md:text-sm font-medium hover:border-[#d62828] hover:text-[#d62828] transition-all duration-300">
-                +46704142666
-            </a>
-
-            <a href="mailto:lycke.lundin@gmail.com" data-link-name="kontakt-email"
-               class="px-6 py-3 rounded-full border border-gray-300 text-gray-800 text-xs md:text-sm font-medium hover:border-[#d62828] hover:text-[#d62828] transition-all duration-300">
-                lycke.lundin@gmail.com
-            </a>
-
-            <a href="https://www.linkedin.com/in/lycke-lundin-309007156/" target="_blank" rel="noopener noreferrer" data-link-name="kontakt-linkedin"
-               class="px-6 py-3 rounded-full border border-gray-300 text-gray-800 text-xs md:text-sm font-medium hover:border-[#d62828] hover:text-[#d62828] transition-all duration-300">
-                LinkedIn
-            </a>
-        </div>
-
-    </div>
-
-    <!-- Bottom Sub-Footer -->
-    <div class="mt-20 pt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 max-w-7xl mx-auto">
-        <div>GROWTH MARKETER PORTFOLIO</div>
-        <div class="mt-2 sm:mt-0">&copy; <span id="year"></span> LYCKE LUNDIN. ALL RIGHTS RESERVED.</div>
-    </div>
-</section>
-
-<!-- Minimal JavaScript for dynamic year -->
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-    document.querySelectorAll('a[data-link-name]').forEach(function(link) {
-        link.addEventListener('click', function() {
-            window.dataLayer.push({
-                event: 'link_click',
-                link: {
-                    name: link.getAttribute('data-link-name'),
-                    text: link.textContent.trim(),
-                    url: link.getAttribute('href')
-                }
+    <!-- Minimal JavaScript for dynamic year -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+        document.querySelectorAll('a[data-link-name]').forEach(function(link) {
+            link.addEventListener('click', function() {
+                window.dataLayer.push({
+                    event: 'link_click',
+                    link: {
+                        name: link.getAttribute('data-link-name'),
+                        text: link.textContent.trim(),
+                        url: link.getAttribute('href')
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
+    <script>
+        // Byter hero-bilden mot regnhatt.png om dagens väder i Stockholm innebär nederbörd
+        async function setHeroImageBasedOnWeather() {
+            const heroImg = document.getElementById('hero-photo');
+            if (!heroImg) return;
+
+            try {
+                const response = await fetch('weather-api/vader-stockholm-7dagar.json');
+                if (!response.ok) throw new Error('Kunde inte hämta väderdata');
+
+                const data = await response.json();
+
+                // Dagens datum i samma format som JSON-filen: YYYY-MM-DD
+                const idag = new Date().toISOString().split('T')[0];
+
+                const dagensVader = data.prognos.find(function(dag) {
+                    return dag.datum === idag;
+                });
+
+                if (dagensVader && dagensVader.nederbord_mm > 0) {
+                    heroImg.src = heroImg.getAttribute('data-rain-src');
+                    heroImg.alt = 'Lycke Lundin (regnigt väder i Stockholm idag)';
+
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'weather_image_swap',
+                        weather: {
+                            date: idag,
+                            precipitation_mm: dagensVader.nederbord_mm,
+                            image_shown: 'rain'
+                        }
+                    });
+                } else {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'weather_image_swap',
+                        weather: {
+                            date: idag,
+                            precipitation_mm: dagensVader ? dagensVader.nederbord_mm : null,
+                            image_shown: 'default'
+                        }
+                    });
+                }
+            } catch (error) {
+                console.log('Väderbaserad bildväxling kunde inte köras:', error.message);
+                // Vid fel: behåll originalbilden, ingen synlig konsekvens för besökaren
+            }
+        }
+
+        setHeroImageBasedOnWeather();
+    </script>
 </body>
 </html>

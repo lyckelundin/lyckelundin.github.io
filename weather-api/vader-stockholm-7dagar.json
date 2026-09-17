@@ -1,0 +1,55 @@
+{
+  "stad": "Stockholm",
+  "hamtad": "2026-09-15T18:29:42.086Z",
+  "prognos": [
+    {
+      "datum": "2026-09-15",
+      "max_temp_c": 18.4,
+      "min_temp_c": 14.3,
+      "nederbord_mm": 5,
+      "vader_kod": 3
+    },
+    {
+      "datum": "2026-09-16",
+      "max_temp_c": 18.5,
+      "min_temp_c": 15.2,
+      "nederbord_mm": 7.5,
+      "vader_kod": 63
+    },
+    {
+      "datum": "2026-09-17",
+      "max_temp_c": 16.9,
+      "min_temp_c": 13.3,
+      "nederbord_mm": 0,
+      "vader_kod": 3
+    },
+    {
+      "datum": "2026-09-18",
+      "max_temp_c": 17.8,
+      "min_temp_c": 11.6,
+      "nederbord_mm": 1.43,
+      "vader_kod": 51
+    },
+    {
+      "datum": "2026-09-19",
+      "max_temp_c": 16.8,
+      "min_temp_c": 11.8,
+      "nederbord_mm": 0,
+      "vader_kod": 3
+    },
+    {
+      "datum": "2026-09-20",
+      "max_temp_c": 16.1,
+      "min_temp_c": 10.9,
+      "nederbord_mm": 2.4,
+      "vader_kod": 53
+    },
+    {
+      "datum": "2026-09-21",
+      "max_temp_c": 14.7,
+      "min_temp_c": 9.2,
+      "nederbord_mm": 0,
+      "vader_kod": 2
+    }
+  ]
+}

@@ -2,18 +2,19 @@
 <html lang="sv">
 <head>
 <meta charset="UTF-8">
-<title>Museisektion – förhandsgranskning</title>
+<title>Museer & Entrépris — Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #10231F;
-    --surface: #16302A;
-    --ink: #EFEAE0;
-    --muted: #9CB3AA;
-    --brass: #C6A15B;
-    --rust: #C1613F;
-    --hairline: rgba(239,234,224,0.16);
+    --bg: #0a0a0a;
+    --surface: #161616;
+    --ink: #f5f5f3;
+    --muted: #9a9a92;
+    --pos: #f5f5f3;
+    --neg: #d62828;
+    --accent: #d62828;
+    --hairline: rgba(245,245,243,0.14);
   }
 
   * { box-sizing: border-box; }
@@ -72,8 +73,8 @@
     display: block;
   }
 
-  .stat .num.down { color: var(--rust); }
-  .stat .num.up { color: var(--brass); }
+  .stat .num.down { color: var(--neg); }
+  .stat .num.up { color: var(--pos); }
 
   .stat .label {
     font-size: 14px;
@@ -96,7 +97,7 @@
   }
 
   .quote {
-    border-left: 2px solid var(--brass);
+    border-left: 2px solid var(--accent);
     padding: 4px 0 4px 24px;
     margin: 0 0 40px;
     font-family: 'Fraunces', serif;
@@ -119,6 +120,106 @@
     color: var(--muted);
     max-width: 58ch;
     margin: 0 0 40px;
+  }
+
+  .section-label {
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .plan-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: 640px) {
+    .plan-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .plan-card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    padding: 22px 24px;
+  }
+
+  .plan-card.highlight {
+    border-color: var(--accent);
+  }
+
+  .plan-card .step-label {
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+
+  .plan-card h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 19px;
+    margin: 8px 0 10px;
+    line-height: 1.3;
+  }
+
+  .plan-card p {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .flow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    border-top: 1px solid var(--hairline);
+    padding-top: 28px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .flow .step {
+    flex: 1 1 100px;
+  }
+
+  .flow .step-num {
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    display: block;
+  }
+
+  .flow .step-sub {
+    font-size: 11px;
+    color: var(--muted);
+    opacity: 0.7;
+    display: block;
+    margin-top: 3px;
+  }
+
+  .flow-note {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 16px;
+    margin: 24px 0 56px;
+  }
+
+  .mockups img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--hairline);
+    margin-bottom: 20px;
   }
 
   .source {
@@ -165,13 +266,89 @@
   </div>
 
   <blockquote class="quote">
-    lägg till text
-    <cite>— </cite>
+    "Ett museibesök börjar inte vid entrén. Det börjar med beslutet att gå dit."
+    <cite>— Och priset kan vara en del av det beslutet.</cite>
   </blockquote>
 
-  <p class="counterpoint"></p>
+  <p class="counterpoint">Siffrorna visar en tydlig korrelation mellan entrépris och besöksantal — inte nödvändigtvis vilken regering som styr. Frågan är om museum har blivit en klassfråga, eller om andra faktorer väger tyngre.</p>
+
+  <!-- INNEHÅLLSPLAN -->
+  <span class="section-label">Innehållsplan — från en siffra till en större fråga</span>
+  <h2 style="font-size: 26px; margin-bottom: 32px;">Museer & entrépris</h2>
+
+  <div class="plan-grid">
+    <div class="plan-card">
+      <span class="step-label">1. Attention — Reel / TikTok / LinkedIn</span>
+      <h4>När kulturen slutade vara gratis försvann 21% av besökarna.</h4>
+      <p>Har museum blivit en klassfråga? Men vilka var det som slutade komma?</p>
+    </div>
+    <div class="plan-card">
+      <span class="step-label">2. Fördjupa — Carousel</span>
+      <h4>2016 vs 2023</h4>
+      <p>Fri entré infördes på 18 statliga museer 2016 (+50% besök). Avgiften återinfördes 2023 (−21%).</p>
+    </div>
+    <div class="plan-card">
+      <span class="step-label">3. Undersök — Data & analys</span>
+      <h4>Vilka påverkas mest?</h4>
+      <p>Mönster i vilka som minskar sitt museibesök: inkomst, utbildningsnivå, ålder, tidigare kulturvanor, socioekonomisk bakgrund.</p>
+    </div>
+    <div class="plan-card">
+      <span class="step-label">4. Growth-vinkel — Carousel</span>
+      <h4>Om pris är en tröskel — hur minskar man den?</h4>
+      <p>Gratis första besöket · Rabatterade tider · Studentpris · Ta med en vän gratis.</p>
+    </div>
+    <div class="plan-card">
+      <span class="step-label">5. Diskussion — Poll</span>
+      <h4>Vad tror du är den största tröskeln?</h4>
+      <p>Pris · Tid · "Det är inte för mig" · Tillgänglighet/läge.</p>
+    </div>
+    <div class="plan-card">
+      <span class="step-label">6. Insight — Quote</span>
+      <h4>"Ett museibesök börjar inte vid entrén."</h4>
+      <p>Det börjar med beslutet att gå dit — och priset kan vara en del av det beslutet.</p>
+    </div>
+    <div class="plan-card">
+      <span class="step-label">7. Fördjupa — Jämförelse</span>
+      <h4>Samma förändring, olika resultat</h4>
+      <p>Nationalmuseum −23% · Livrustkammaren −28% · Världskulturmuseet +3% · Vasamuseet +32%.</p>
+    </div>
+    <div class="plan-card highlight">
+      <span class="step-label" style="color: var(--accent);">8. Portfolio — Case</span>
+      <h4>Vi började med en siffra. Vi slutade med en fråga.</h4>
+      <p>En analys om entrépris, besök och beteende.</p>
+    </div>
+  </div>
+
+  <div class="flow">
+    <div class="step"><span class="step-num">1. Väcka frågan</span><span class="step-sub">Sociala medier</span></div>
+    <div class="step"><span class="step-num">2. Visa datan</span><span class="step-sub">Carousel</span></div>
+    <div class="step"><span class="step-num">3. Förklara</span><span class="step-sub">Analys & insikter</span></div>
+    <div class="step"><span class="step-num">4. Engagera</span><span class="step-sub">Poll / diskussion</span></div>
+    <div class="step"><span class="step-num">5. Sprid</span><span class="step-sub">Quote / delbart</span></div>
+    <div class="step"><span class="step-num">6. Ta vidare</span><span class="step-sub">Portfolio / case</span></div>
+  </div>
+  <p class="flow-note">En siffra kan öppna en större diskussion.</p>
+
+  <!-- SLUTFORMAT -->
+  <span class="section-label">Referens — exempel på slutformat</span>
+  <div class="plan-grid">
+    <div class="plan-card">
+      <span class="step-label">Format — Longread / Substack</span>
+      <h4>"Vad händer med museibesöken när priset på kultur förändras?"</h4>
+      <p>Kultur är en fråga om pris. Statistiken visar en tydlig korrelation mellan entrépris och besöksantal — men frågan är vad den betyder för framtidens kulturinstitutioner.</p>
+    </div>
+    <div class="plan-card">
+      <span class="step-label">Format — TV-panel / studiosamtal</span>
+      <h4>"Museer: pris eller tillgänglighet?"</h4>
+      <p>Samma siffror, satta i ett samtal: pris kan vara en tröskel, men det är inte den enda faktorn som avgör om vi går på museum.</p>
+    </div>
+  </div>
 
   <p class="source">Källor: Myndigheten för kulturanalys, "Fri entré till museer" (Rapport 2023:1) och "Ett år utan fri entré" (Faktablad 2024:1); Sveriges Museer, besöksstatistik 2023. Reformmuseer = statliga museer som ingick i 2016 års fri entré-reform. Jämförelsegruppen för 2016 är ett genomsnitt 2013–2019 (exakt siffra för enbart 2016 finns ej); jämförelsegruppen för 2023 avser samma år.</p>
+
+  <div class="mockups" style="margin-top: 56px;">
+    <img src="musee.png" alt="Innehållsplan — Museer & entrépris, 8 steg från attention till portfolio-case">
+  </div>
 
 </div>
 
@@ -185,14 +362,14 @@ new Chart(document.getElementById('reformChart'), {
       {
         label: 'Reformmuseer (fick/förlorade fri entré)',
         data: [50, -21],
-        backgroundColor: '#C6A15B',
+        backgroundColor: '#d62828',
         borderRadius: 2,
         barThickness: 48
       },
       {
         label: 'Jämförbara museer (oförändrad avgift)',
         data: [6, 14],
-        backgroundColor: '#5F7A70',
+        backgroundColor: '#5a5a54',
         borderRadius: 2,
         barThickness: 48
       }
@@ -203,17 +380,17 @@ new Chart(document.getElementById('reformChart'), {
     plugins: {
       legend: {
         position: 'bottom',
-        labels: { color: '#EFEAE0', font: { family: 'IBM Plex Sans' }, boxWidth: 14 }
+        labels: { color: '#f5f5f3', font: { family: 'IBM Plex Sans' }, boxWidth: 14 }
       }
     },
     scales: {
       y: {
-        title: { display: true, text: '% förändring i besök', color: '#9CB3AA', font: { family: 'IBM Plex Sans' } },
-        ticks: { color: '#9CB3AA', font: { family: 'IBM Plex Sans' } },
-        grid: { color: 'rgba(239,234,224,0.08)' }
+        title: { display: true, text: '% förändring i besök', color: '#9a9a92', font: { family: 'IBM Plex Sans' } },
+        ticks: { color: '#9a9a92', font: { family: 'IBM Plex Sans' } },
+        grid: { color: 'rgba(245,245,243,0.08)' }
       },
       x: {
-        ticks: { color: '#EFEAE0', font: { family: 'IBM Plex Sans' } },
+        ticks: { color: '#f5f5f3', font: { family: 'IBM Plex Sans' } },
         grid: { display: false }
       }
     }
@@ -229,7 +406,7 @@ new Chart(document.getElementById('museumChart'), {
       data: [-23, -28, 3, 32],
       backgroundColor: function(ctx) {
         const v = ctx.raw ?? ctx.dataset.data[ctx.dataIndex];
-        return v < 0 ? '#C1613F' : '#C6A15B';
+        return v < 0 ? '#d62828' : '#f5f5f3';
       },
       borderRadius: 2,
       barThickness: 40
@@ -240,11 +417,11 @@ new Chart(document.getElementById('museumChart'), {
     plugins: { legend: { display: false } },
     scales: {
       y: {
-        ticks: { color: '#9CB3AA', font: { family: 'IBM Plex Sans' } },
-        grid: { color: 'rgba(239,234,224,0.08)' }
+        ticks: { color: '#9a9a92', font: { family: 'IBM Plex Sans' } },
+        grid: { color: 'rgba(245,245,243,0.08)' }
       },
       x: {
-        ticks: { color: '#EFEAE0', font: { family: 'IBM Plex Sans' } },
+        ticks: { color: '#f5f5f3', font: { family: 'IBM Plex Sans' } },
         grid: { display: false }
       }
     }
