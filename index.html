@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -94,7 +94,6 @@
 
                     <div class="pt-6 flex items-center space-x-4 group cursor-pointer">
                         <span class="font-script text-4xl md:text-6xl text-[#0a0a0a] group-hover:text-[#d62828] transition-colors">
-                            Introduction
                         </span>
                         <div class="w-12 h-12 rounded-full border border-[#0a0a0a] flex items-center justify-center group-hover:bg-[#d62828] group-hover:border-[#d62828] group-hover:text-white transition-all duration-300">
                             ➔
@@ -208,7 +207,7 @@
                                 Tools
                             </span>
                             <p class="text-sm text-gray-400 leading-relaxed mt-2">
-                                JavaScript · APIs · Data processing · UX
+                                JavaScript · APIs · Data processing 
                             </p>
                         </div>
 
@@ -229,7 +228,7 @@
     <!-- 5. MY JOURNEY -->
     <section class="py-24 px-6 md:px-16 bg-[#f5f5f3] border-t border-b border-gray-300">
         <div class="max-w-7xl mx-auto">
-
+        </div>
             <!-- Section Title -->
             <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4 mb-16">
                 <h2 class="font-display text-7xl md:text-9xl text-[#d62828] leading-none">
@@ -465,5 +464,20 @@
 
         setHeroImageBasedOnWeather();
     </script>
+    <script>
+    // Mäter hur länge besökaren stannar på sidan innan den lämnar
+    const pageLoadTime = Date.now();
+    window.addEventListener('beforeunload', function() {
+        const secondsOnPage = Math.round((Date.now() - pageLoadTime) / 1000);
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            event: 'time_on_page',
+            engagement: {
+                seconds: secondsOnPage,
+                page: 'portfolio'
+            }
+        });
+    });
+</script>
 </body>
 </html>
