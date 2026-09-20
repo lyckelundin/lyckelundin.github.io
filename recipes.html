@@ -184,6 +184,15 @@
             ingredients.push(value);
             input.value = '';
             renderIngredients();
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'ingredient_added',
+                pantry: {
+                    ingredient: value,
+                    total_ingredients: ingredients.length
+                }
+            });
         }
 
         function removeIngredient(index) {
@@ -210,6 +219,15 @@
                 alert('Add at least one ingredient to the pantry first.');
                 return;
             }
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'recipe_search',
+                search: {
+                    ingredient_count: ingredients.length,
+                    ingredients: ingredients.join(',')
+                }
+            });
 
             document.getElementById('weatherResult').textContent = 'Getting your location...';
             document.getElementById('storeResult').textContent = 'Getting your location...';
@@ -271,6 +289,11 @@
 
                 if (!data.length) {
                     div.innerHTML = '<p class="text-gray-400 italic col-span-full">No recipes found for these ingredients.</p>';
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: 'recipe_results',
+                        results: { count: 0 }
+                    });
                     return;
                 }
 
@@ -296,6 +319,12 @@
                 }).join('');
 
                 updateRecommendation(data[0].missedIngredientCount);
+
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: 'recipe_results',
+                    results: { count: data.length }
+                });
             } catch (e) {
                 div.innerHTML = `<p class="text-[#e63946] col-span-full">${e.message}</p>`;
             }
